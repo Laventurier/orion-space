@@ -6,6 +6,109 @@
   font-family: 'OpenSans';
   src: url("../fonts/OpenSans-Regular.ttf"); }
 
+.grid-4 {
+  width: 33.333333333%;
+  float: left;
+  padding: 0 10px; }
+
+.service {
+  background: #e7eef6;
+  padding: 30px 0 34px;
+  text-align: center; }
+  .service h3 {
+    margin-top: 27px; }
+  .service p {
+    margin-top: 31px;
+    color: #88929d;
+    font-size: 14px; }
+
+.how {
+  text-align: center;
+  padding: 27px 0 125px; }
+  .how p {
+    color: #a1a1a1;
+    margin-top: 35px; }
+  .how .discuss {
+    position: relative;
+    margin-top: 35px; }
+    .how .discuss .discuss-msg {
+      width: 44.48%;
+      padding: 24px 21px;
+      border: 1px solid #e1e5eb;
+      position: absolute;
+      text-align: left;
+      border-bottom: none; }
+      .how .discuss .discuss-msg p {
+        margin: 13px 0;
+        padding: 0 !important; }
+      .how .discuss .discuss-msg h4 {
+        font-size: 14px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        color: #717171; }
+      .how .discuss .discuss-msg p {
+        font-size: 12px;
+        line-height: 12px;
+        padding: 15px 0; }
+    .how .discuss .msg-1 {
+      left: 0;
+      bottom: 48px; }
+      .how .discuss .msg-1 hr {
+        background: #ff1e4f;
+        height: 5px;
+        margin-left: -22px;
+        margin-right: -22px;
+        margin-bottom: -24px;
+        border: none; }
+    .how .discuss .msg-2 {
+      top: 25px;
+      right: 0; }
+      .how .discuss .msg-2 hr {
+        background: #4fb1f3;
+        height: 5px;
+        margin-left: -22px;
+        margin-right: -22px;
+        margin-bottom: -24px;
+        border: none; }
+    .how .discuss .msg-2::after,
+    .how .discuss .msg-2::before {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 100%;
+      width: 0;
+      height: 0;
+      border-style: solid; }
+    .how .discuss .msg-1::after,
+    .how .discuss .msg-1::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 100%;
+      width: 0;
+      height: 0;
+      border-style: solid; }
+    .how .discuss .msg-2::before {
+      top: 25px;
+      border-color: transparent #e1e5eb transparent transparent;
+      border-width: 11px;
+      border-right-width: 15px; }
+    .how .discuss .msg-2::after {
+      top: 26px;
+      border-color: transparent #fff transparent transparent;
+      border-width: 10px;
+      border-right-width: 14px; }
+    .how .discuss .msg-1::before {
+      top: 9px;
+      border-color: transparent transparent transparent #e1e5eb;
+      border-width: 11px;
+      border-left-width: 15px; }
+    .how .discuss .msg-1::after {
+      top: 10px;
+      border-color: transparent transparent transparent #fff;
+      border-width: 10px;
+      border-left-width: 14px; }
+
 * {
   padding: 0;
   margin: 0;
@@ -113,6 +216,11 @@ header {
         top: 50%;
         background: #0078b2; }
 
+h2,
+h3,
+h4 {
+  color: #555555; }
+
 h1,
 h2,
 h3,
@@ -121,7 +229,42 @@ h5,
 h6 {
   font-family: 'Montserrat'; }
 
+@media (max-width: 600px) {
+  .grid-4 {
+    width: 100%;
+    margin-bottom: 25px; } }
+
+@media (max-width: 700px) {
+  .how .discuss .msg-1 {
+    bottom: 0; }
+  .how .discuss .discuss-msg {
+    width: 100%;
+    position: relative; }
+  .how .discuss .discuss-msg::after, .how .discuss .discuss-msg::before {
+    display: none; }
+  .how .discuss img {
+    display: none; } }
+
 @media (max-width: 930px) {
+  body .sub-header {
+    height: 760px; }
+    body .sub-header .container .row .sub-head-content h1 {
+      margin-top: 44px;
+      font-size: 36px; }
+    body .sub-header .container .row .sub-head-content p {
+      font-size: 14px; }
+    body .sub-header .container .row .sub-head-content .sub-head-group {
+      margin-top: 54px;
+      width: 180px; }
+      body .sub-header .container .row .sub-head-content .sub-head-group a {
+        width: 100%;
+        border-radius: 0; }
+      body .sub-header .container .row .sub-head-content .sub-head-group a:nth-child(1) {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px; }
+      body .sub-header .container .row .sub-head-content .sub-head-group a:nth-child(2) {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px; }
   header .row {
     border-bottom: 1px solid #5b6677;
     padding-bottom: 15px; }

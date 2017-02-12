@@ -1,7 +1,4 @@
 $(document).ready(function() {
-    $('.sub-header').parallax({
-        imageSrc: '../img/banner.jpg'
-    });
 
     var isToggled = false;
     $('.adaptive-btn').click(function() {
@@ -20,5 +17,9 @@ $(document).ready(function() {
             $('header ul').slideUp(600);
             isToggled = false;
         }
+    });
+
+    $('.sub-header').parallax({
+        imageSrc: '../img/banner.jpg'
     });
 });
