@@ -1,5 +1,4 @@
 var map;
-
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: {
@@ -13,7 +12,6 @@ function initMap() {
         streetViewControl: false,
         rotateControl: false
     });
-    var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
     var marker = new google.maps.Marker({
         position: {
             lat: -7.423929,
