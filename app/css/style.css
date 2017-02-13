@@ -11,24 +11,39 @@ footer {
   padding: 40px 0 35px; }
   footer .grid-6 h3 {
     color: #fff; }
-  footer .grid-6 form .type {
-    float: right;
-    margin-top: 15px; }
-    footer .grid-6 form .type input {
-      float: left;
-      height: 39px;
-      width: 300px;
-      border: none;
-      background: #363636;
-      color: #5c5c5c;
-      padding-left: 30px; }
-    footer .grid-6 form .type button {
-      background: #555555;
-      color: #b7b7b7;
-      border: none;
-      float: left;
-      height: 39px;
-      width: 47px; }
+  footer .grid-6 .form {
+    max-width: 350px;
+    float: right; }
+    footer .grid-6 .form p {
+      display: block;
+      margin-top: 20px;
+      text-align: right;
+      color: #545454; }
+      footer .grid-6 .form p img {
+        padding-left: 8px; }
+    footer .grid-6 .form form .type {
+      margin-top: 15px; }
+      footer .grid-6 .form form .type::after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden; }
+      footer .grid-6 .form form .type input {
+        float: left;
+        height: 39px;
+        width: 300px;
+        border: none;
+        background: #363636;
+        color: #5c5c5c;
+        padding-left: 30px; }
+      footer .grid-6 .form form .type button {
+        background: #555555;
+        color: #b7b7b7;
+        border: none;
+        float: left;
+        height: 39px;
+        width: 47px; }
   footer .grid-6 ul {
     display: block;
     float: left;
@@ -330,6 +345,26 @@ h6 {
       height: 100%; }
   .our_work .collection:first-child {
     margin-bottom: 23px; }
+
+@media (max-width: 768px) {
+  .grid-6 {
+    width: 100%;
+    margin-bottom: 25px; }
+  footer ul {
+    width: 100%;
+    margin-bottom: 25px; }
+  footer .grid-6 .form {
+    max-width: 100%;
+    float: none; }
+    footer .grid-6 .form h3 {
+      text-align: center; }
+    footer .grid-6 .form form .type input {
+      width: 80%; }
+    footer .grid-6 .form form .type button {
+      width: 20%; } }
+
+.gm-style-cc {
+  display: none; }
 
 @media (max-width: 600px) {
   .partner ul li {

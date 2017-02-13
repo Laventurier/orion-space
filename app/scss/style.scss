@@ -13,26 +13,45 @@ footer{
     h3{
       color:#fff;
     }
-    form{
-      .type{
-        float: right;
-        margin-top:15px;
-        input{
-          float: left;
-          height: 39px;
-          width: 300px;
-          border:none;
-          background: #363636;
-          color:#5c5c5c;
-          padding-left: 30px;
+    .form{
+      max-width: 350px;
+      float: right;
+      p{
+        display:block;
+        margin-top: 20px;
+        text-align: right;
+        color:#545454;
+        img{
+          padding-left: 8px;
         }
-        button{
-          background: #555555;
-          color:#b7b7b7;
-          border:none;
-          float: left;
-          height: 39px;
-          width: 47px;
+      }
+      form{
+        .type{
+          margin-top:15px;
+          &::after {
+              content: "";
+              display: block;
+              height: 0;
+              clear: both;
+              visibility: hidden;
+          }
+          input{
+            float: left;
+            height: 39px;
+            width: 300px;
+            border:none;
+            background: #363636;
+            color:#5c5c5c;
+            padding-left: 30px;
+          }
+          button{
+            background: #555555;
+            color:#b7b7b7;
+            border:none;
+            float: left;
+            height: 39px;
+            width: 47px;
+          }
         }
       }
     }
@@ -449,7 +468,40 @@ h6 {
         margin-bottom: 23px;
     }
 }
-
+@media (max-width:768px){
+  .grid-6 {
+      width: 100%;
+      margin-bottom: 25px;
+  }
+  footer{
+    ul{
+      width: 100%;
+      margin-bottom: 25px;
+    }
+    .grid-6{
+      .form{
+        max-width: 100%;
+        float: none;
+        h3{
+          text-align: center;
+        }
+        form{
+          .type{
+            input{
+              width: 80%;
+            }
+            button{
+              width: 20%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.gm-style-cc{
+display: none;
+}
 @media (max-width:600px) {
   .partner{
     ul{
